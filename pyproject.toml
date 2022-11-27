@@ -1,0 +1,28 @@
+[build-system]
+requires = [ 'setuptools' ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysnmptui"
+description = "Python SNMP TUI (Terminal User Interface)"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["snmp", "tui"]
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "py-cui==0.1.6",
+    "snimpy",
+    "argparse",
+]
+dynamic = ["version"]
+
+[project.scripts]
+pysnmptui = "snmpui.console_main:console_main"
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+

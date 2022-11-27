@@ -1,31 +1,9 @@
 #!/usr/bin/env python3
-from .snmp import SnmpUI, Client
+from . import main
 import argparse
-import sys
 
-def Exit():
-    sys.exit(0)
-
-def main(
-        host,
-        userName,
-        authPass,
-        privPass,
-        version=3
-        ):
-    myUI = SnmpUI()
-    myUI.setSNMP(
-            host=host,
-            version=version,
-            userName=userName,
-            authPass=authPass,
-            privPass=privPass
-            )
-    myUI.run()
-
-if __name__ == "__main__":
+def console_main():
     parser = argparse.ArgumentParser(
-            prog = "snmpui",
             description = "Python SNMP TUI (Terminal User Interface)"
             )
     parser.add_argument('-H', '--host', required=True, help="SNMP Host")
@@ -41,10 +19,13 @@ if __name__ == "__main__":
     version = args.version
     if version == "3":
         version = 3
-    main(
+    snmpui.main(
             host,
             userName,
             authPass,
             privPass,
-            version
-            )
+            version)
+
+if __name__ == "__main__":
+    console_main()
+

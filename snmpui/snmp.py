@@ -1,10 +1,11 @@
 import sys
-from ui import UI
 import snimpy
 from snimpy.config import Conf
 from snimpy import manager
 import ipaddress
 import json
+
+from .ui import UI
 
 class SnmpError(Exception):
     pass

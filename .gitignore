@@ -1,3 +1,7 @@
 **/__pycache__
-venv/*
+build/*
+dist/*
 mibs/*
+pysnmptui.egg-info/*
+venv/*
+
