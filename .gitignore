@@ -2,6 +2,6 @@
 build/*
 dist/*
 mibs/*
-pysnmptui.egg-info/*
+src/*.egg-info/*
 venv/*
 
