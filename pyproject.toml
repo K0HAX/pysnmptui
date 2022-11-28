@@ -19,6 +19,7 @@ dependencies = [
     "py-cui==0.1.6",
     "snimpy",
     "argparse",
+    "pyyaml"
 ]
 dynamic = ["version"]
 
